@@ -48,10 +48,10 @@ class UserService {
     }
 
 
-    async UserUpdate (body) {
+    async UserUpdate (body, id) {
         try {
+            await UserModel.updateOne({_id: id}, { $set: body })
             if(body.password) body.password = await bcrypt.hash(body.password, 10)
-            await UserModel.updateOne({_id: body._id}, { $set: body })
             return 'user success update !'
         } catch (error) {
             throw new CustomError(error.status || 500, error.message || 'Internal server error !')

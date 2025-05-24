@@ -5,7 +5,7 @@ class TeacherController {
 
     async register (req, res, next) {
         try {
-            const result = await teacherService.TeacherRegister(req.body,req.files.img)
+            const result = await teacherService.TeacherRegister(req.body)
             res.status(201).json({status: 201, message: 'success', success: true, ...result})
         } catch (error) {
             next(error)

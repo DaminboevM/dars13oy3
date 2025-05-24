@@ -3,7 +3,7 @@ import { StudentValidation } from "../../validation/Student.validation.js"
 export default async (req, res, next) => {
   try {
 
-    if (req.method == "POST" && req.url == "/v1/student/register") {
+    if (req.method == "POST" && req.url == "/v1/student/create") {
       const { error } = await StudentValidation.createSchema.validate(req.body)
       if (error) throw new CustomError(403, error.details[0].message)
     }

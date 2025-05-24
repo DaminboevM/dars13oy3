@@ -8,8 +8,8 @@ const UserRouter = Router()
 
 UserRouter.post('/register',validation, userController.register)
 UserRouter.post('/login',validation, userController.login)
-UserRouter.post('/update',validation,chekToken, userController.update)
-UserRouter.post('/delete/:id',validation,chekToken, userController.delete)
+UserRouter.put('/update/:id', chekToken, validation, permission, userController.update)
+UserRouter.delete('/delete/:id', chekToken, validation, permission, userController.delete)
 
 
 export default UserRouter

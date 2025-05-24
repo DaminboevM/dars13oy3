@@ -43,7 +43,7 @@ class TeacherService {
             const teacher = await TeacherModel.findOne({user_id: body.user_id})
             if(!teacher) throw new CustomError(404, 'User not found')
 
-            if(body.password) body.password = bcrypt.hash(body.password, 10)
+            if(body.password) body.password = await bcrypt.hash(body.password, 10)
             await TeacherModel.updateOne({_id: body._id}, { $set: body })
 
             return 'teacher succses update'

@@ -8,8 +8,8 @@ const TeacherRouter = Router()
 
 TeacherRouter.post('/register',validation, teacherController.register)
 TeacherRouter.post('/login',validation, teacherController.login)
-TeacherRouter.post('/update',validation,chekToken, teacherController.update)
-TeacherRouter.post('/delete/:id',validation,chekToken, teacherController.delete)
+TeacherRouter.put('/update', chekToken, validation, permission, teacherController.update)
+TeacherRouter.delete('/delete/:id', chekToken, validation, permission, teacherController.delete)
 
 
 export default TeacherRouter

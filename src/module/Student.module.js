@@ -2,7 +2,7 @@ import { model, Schema } from "mongoose";
 
 const StudentSchema = new Schema({
     name: String,
-    groupId: {type: Schema.Types.ObjectId, ref: 'Group'}
+    group_id: {type: Schema.Types.ObjectId, ref: 'Group'}
 })
 
 

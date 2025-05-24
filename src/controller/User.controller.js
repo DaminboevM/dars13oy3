@@ -26,7 +26,7 @@ class UserController {
 
     async update (req, res, next) {
         try {
-            const result = await userService.UserUpdate(req.body)
+            const result = await userService.UserUpdate(req.body, req.params.id)
             res.status(201).json({status: 201, message: 'success', success: true, data: result})
         } catch (error) {
             next(error)

@@ -14,7 +14,7 @@ export default async (req, res, next) => {
       if (error) throw new CustomError(403, error.details[0].message)
     }
 
-    if (req.method == "PUT" && req.url == "/v1/user/update") {
+    if (req.method == "PUT" && req.url == "/v1/user/update/:id") {
       const { error } = await UserValidation.UpdateSchema.validate(req.body)
       if (error) throw new CustomError(403, error.details[0].message)
     }

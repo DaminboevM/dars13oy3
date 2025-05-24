@@ -6,3 +6,7 @@
 2025-05-23T06:05:53.556Z - ERROR: secretOrPrivateKey must have a value
 2025-05-23T06:06:53.681Z - ERROR: E11000 duplicate key error collection: dars12.users index: email_1 dup key: { email: "m701rizo@gmail.com" }
 2025-05-23T06:08:31.711Z - ERROR: Invalid email or tokin !
+2025-05-23T19:39:44.446Z - ERROR: Invalid atomic update value for $set. Expected an object, received undefined
+2025-05-23T20:01:23.933Z - ERROR: Cannot read properties of undefined (reading 'img')
+2025-05-23T20:03:43.097Z - ERROR: Teacher validation failed: userId: Path `userId` is required.
+2025-05-23T20:07:47.145Z - ERROR: Cast to string failed for value "Promise { <pending> }" (type Promise) at path "password"

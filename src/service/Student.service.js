@@ -16,7 +16,8 @@ class StudentService {
 
     async UpdateStudent (body, id) {
         try {
-            await StudentModel.updateOne({_id: id}, {$set: body})
+            const r = await StudentModel.updateOne({_id: id}, {$set: body})
+            console.log(r)
             return 'student success updated !'
         } catch (error) {
             throw new CustomError(error.status || 500, error.message || 'Internal server error !')

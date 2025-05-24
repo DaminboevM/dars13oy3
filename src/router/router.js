@@ -1,7 +1,7 @@
 import { Router } from "express";
 import UserRouter from "./User.route.js";
 import TeacherRouter from "./Teacher.route.js";
-import GrooupRouter from "./Branch.route.js";
+import GrooupRouter from "./Group.route.js";
 import BranchRouter from "./Branch.route.js";
 import StudentRouter from "./Student.route.js";
 import PermissionRouter from "./Permission.route.js";
