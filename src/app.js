@@ -1,7 +1,7 @@
 import express from 'express'
 import fileUpload from 'express-fileupload'
-import { connectDB } from './config/Database.js'
 import 'dotenv/config'
+import { connectDB } from './config/Database.js'
 import ErrorHeandler from './middleware/ErrorHeandler.js'
 import router from './router/router.js'
 
